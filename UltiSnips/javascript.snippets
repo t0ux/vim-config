@@ -1,0 +1,51 @@
+snippet cl "console.log" b
+console.log($1);
+endsnippet
+
+snippet ct "console.table" b
+console.table($1)
+endsnippet
+
+snippet impd "import File from './File'" b
+import $1 from '${2:./}${3:$1}'
+endsnippet
+
+snippet exp "export { default } from './CurrentFolderName'"
+export { default } from './${1:`!v expand('%:p:h:t')`}'
+endsnippet
+
+snippet fn "normal function declaration"
+function $1($2) {$3};
+endsnippet
+
+snippet afn "arrow fn declaration"
+const $1 = ($2) => {$3};
+endsnippet
+
+# -------- REACT ----------
+
+snippet rfc "React function component" b
+import React from 'react'
+
+const ${1:`!v expand('%:t:r')`} = props => {
+	return null$0
+}
+
+export default $1
+endsnippet
+
+snippet rcc "React class component" b
+import React, { Component } from 'react'
+
+export default class ${1:`!v expand('%:t:r')`} extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {}
+	}
+
+	render() {
+		return null$0
+	}
+}
+endsnippet
