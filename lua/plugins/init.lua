@@ -14,11 +14,12 @@ require("packer").startup(function()
 
 	-- theme
 	use({
-		"folke/tokyonight.nvim",
+		"ntk148v/vim-horizon",
 		config = function()
 			require("plugins/theme")
 		end,
 	})
+
 	use({
 		"gruvbox-community/gruvbox",
 		config = function()
@@ -131,5 +132,14 @@ require("packer").startup(function()
 		config = function()
 			require("plugins/colorizer")
 		end,
+	})
+
+	-- bufferline
+	use({
+		"akinsho/bufferline.nvim",
+		config = function()
+			require("plugins/bufferline")
+		end,
+		requires = "kyazdani42/nvim-web-devicons",
 	})
 end)

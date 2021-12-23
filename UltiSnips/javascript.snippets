@@ -2,6 +2,10 @@ snippet cl "console.log" b
 console.log($1);
 endsnippet
 
+snippet ce "console.error" b
+console.error($1);
+endsnippet
+
 snippet ct "console.table" b
 console.table($1)
 endsnippet
@@ -18,9 +22,18 @@ snippet fn "normal function declaration"
 function $1($2) {$3};
 endsnippet
 
+snippet asfn "async fn declaration"
+async function $1($2) {$3};
+endsnippet
+
 snippet afn "arrow fn declaration"
 const $1 = ($2) => {$3};
 endsnippet
+
+snippet asafn "async arrow fn declaration"
+const $1 = async ($2) => {$3};
+endsnippet
+
 
 # -------- REACT ----------
 

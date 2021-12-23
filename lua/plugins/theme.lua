@@ -1,6 +1,6 @@
-vim.cmd([[ syntax on ]])
-vim.cmd([[ colorscheme gruvbox ]])
-vim.cmd([[ set termguicolors ]])
+vim.cmd("syntax on")
+vim.cmd([[ colorscheme horizon ]])
+vim.cmd("set termguicolors")
 
 vim.cmd("hi Normal guibg=none ctermbg=none")
 vim.cmd("hi LineNr guibg=none ctermbg=none")

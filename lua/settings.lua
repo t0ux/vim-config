@@ -1,5 +1,6 @@
 -- map leader to space
 vim.g.mapleader = " "
+vim.opt.termguicolors = true
 noremap = true
 
 -- this local is equal to :set in vim
@@ -38,6 +39,8 @@ set.encoding = "utf-8"
 set.fileencoding = "utf-8"
 set.autoread = true
 set.visualbell = true
+set.cursorcolumn = true
+set.cursorline = true
 
 -- highlight on yank
 vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })')

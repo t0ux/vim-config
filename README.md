@@ -1,8 +1,8 @@
 ## Neovim + TMUX configurations
 
-Running this on Debian 11 Bullseye inside Konsole Terminal.
+Running this on Debian 11 Bullseye inside [Kitty Terminal](https://sw.kovidgoyal.net/kitty/).
 
-Using Neovims built-in LSP, Tree-sitter and Nvim Cmp, Telescope.
+Using Neovims built-in LSP with plugins such as tree-sitter and nvim-cmp and telescope.
 This config is mainly for web development (TypeScript, React, JavaScript, Go) and I will adjust it as I'm learning.
 
 Requires Neovim 0.6.0+
@@ -14,9 +14,9 @@ Requires Neovim 0.6.0+
 ### **Dependencies**
 
 - [git](https://git-scm.com/)
-- [python](https://www.python.org/downloads/) + [pip](https://pypi.org/project/pip/) for some Vim plugins
-- [npm](https://www.npmjs.com/) (for some Vim dependencies)
-- [nodejs](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/) (for some Vim dependencies - see line below)
+- [nodejs](https://nodejs.org/en/) (even though I recommend installing [Node Version Manager](https://github.com/nvm-sh/nvm) which will automatically install npm too, installing them independently will do too)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (for ripgrep inside fuzzy-finder)
-- [packer.nvm](https://github.com/wbthomason/packer.nvim) (to install plugins)
-- [certain language server protocols (required ones can be found inside lua/lsp/init.lua)](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
+- [packer.nvim](https://github.com/wbthomason/packer.nvim) (to install plugins)
+- [StyLua](https://github.com/JohnnyMorganz/StyLua) (since the config is written in lua, it'll help make it pretty)
+- [LSP (language servers)](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) (required ones can be found inside lua/lsp/init.lua)

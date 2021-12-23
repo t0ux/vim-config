@@ -8,8 +8,8 @@ vim.g.mapleader = " "
 -- buffer navigation
 map("n", "<Leader>,", "<C-^>", { noremap = true })
 map("n", "<Leader>bl", ":buffers<CR>", { noremap = true })
-map("n", "<Leader>bn", ":bnext<CR>", { noremap = true })
-map("n", "<Leader>bp", ":bprev<CR>", { noremap = true })
+map("n", "<Tab>", ":bnext<CR>", { noremap = true })
+map("n", "<S-Tab>", ":bprev<CR>", { noremap = true })
 
 -- deal with clipboard copy paste (set clipboard to unnamed plus on linux)
 map("n", "<Leader>y", '"+y', { noremap = true })
@@ -35,3 +35,15 @@ map("n", "<Leader>qq", ":q<CR>", { noremap = true })
 map("n", "<Leader>qn", ":cnext<CR>", { noremap = true })
 map("n", "<Leader>qp", ":cprevious<CR>", { noremap = true })
 map("n", "<Leader>ql", ":copen<CR>", { noremap = true })
+
+-- delete current buffer
+map("n", "<Leader>db", ":bd<CR>", { noremap = true })
+
+-- delete word to the right
+map("i", "<C-e>", "<C-o>de", { noremap = true })
+
+-- undo last action insert mode
+map("i", "<C-l>", "<C-o>u", { noremap = true })
+
+-- delete without yanking
+map("n", "<Leader>pr", '"0p"', { noremap = true })
