@@ -60,18 +60,14 @@ require("telescope").setup({
 	},
 	pickers = {
 		find_files = {
-			theme = "ivy",
+			theme = "dropdown", -- used ivy before
 		},
 		git_files = {
-			theme = "ivy",
+			theme = "dropdown",
 		},
 		live_grep = {
-			theme = "ivy",
-			previewer = false,
-		},
-		file_browser = {
-			theme = "ivy",
-			previewer = false,
+			theme = "dropdown",
+			-- previewer = false,
 		},
 		buffers = {
 			mappings = {
@@ -98,13 +94,31 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"n",
 	"<Leader>f",
-	'<cmd>lua require("telescope.builtin").file_browser()<CR>',
+	'<cmd>lua require("telescope.builtin").find_files()<CR>',
 	{ noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap(
 	"n",
 	"<Leader>b",
 	'<cmd>lua require("telescope.builtin").buffers()<CR>',
+	{ noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<C-f>",
+	'<cmd>lua require("telescope.builtin").grep_string()<CR>',
+	{ noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<Leader>dl",
+	'<cmd>lua require("telescope.builtin").diagnostics()<CR>',
+	{ noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"gr",
+	'<cmd>lua require("telescope.builtin").lsp_references()<CR>',
 	{ noremap = true, silent = true }
 )
 

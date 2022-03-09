@@ -6,7 +6,7 @@ map("i", "<c-s>", "<Esc>:w<CR>a", { noremap = true })
 vim.g.mapleader = " "
 
 -- buffer navigation
-map("n", "<Leader>,", "<C-^>", { noremap = true })
+map("n", "<Leader>,", "<C-^>", { noremap = true }) -- access last open buffer
 map("n", "<Leader>bl", ":buffers<CR>", { noremap = true })
 map("n", "<Tab>", ":bnext<CR>", { noremap = true })
 map("n", "<S-Tab>", ":bprev<CR>", { noremap = true })
@@ -29,12 +29,17 @@ map("v", ">", ">gv", { noremap = true, silent = true })
 map("n", "<Leader>*", ":%s/<C-r><C-w>//<Left>", { noremap = true })
 
 -- quit faster
-map("n", "<Leader>qq", ":q<CR>", { noremap = true })
+map("n", "q<Tab>", ":q<CR>", { noremap = true })
 
 -- quickfixlist
 map("n", "<Leader>qn", ":cnext<CR>", { noremap = true })
 map("n", "<Leader>qp", ":cprevious<CR>", { noremap = true })
-map("n", "<Leader>ql", ":copen<CR>", { noremap = true })
+-- map("n", "<Leader>ql", ":copen<CR>", { noremap = true })
+
+-- local qf list
+map("n", "<Leader>wn", ":lnext<CR>", { noremap = true })
+map("n", "<Leader>wp", ":lprevious<CR>", { noremap = true })
+-- map("n", "<Leader>l", ":lopen<CR>", { noremap = true })
 
 -- delete current buffer
 map("n", "<Leader>db", ":bd<CR>", { noremap = true })

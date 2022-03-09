@@ -14,18 +14,25 @@ require("packer").startup(function()
 
 	-- theme
 	use({
-		"ntk148v/vim-horizon",
+		"jacoborus/tender.vim",
 		config = function()
 			require("plugins/theme")
 		end,
 	})
+  
+	-- use({
+		-- "ntk148v/vim-horizon",
+		-- config = function()
+			-- require("plugins/theme")
+		-- end,
+	-- })
 
-	use({
-		"gruvbox-community/gruvbox",
-		config = function()
-			require("plugins/theme")
-		end,
-	})
+	-- use({
+		-- "gruvbox-community/gruvbox",
+		-- config = function()
+			-- require("plugins/theme")
+		-- end,
+	-- })
 
 	-- nvimtree
 	use({

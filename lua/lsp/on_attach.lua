@@ -11,7 +11,7 @@ return function(client)
 	)
 	vim.api.nvim_set_keymap(
 		"i",
-		"<C-k>",
+		"<A-k>",
 		"<cmd>lua vim.lsp.buf.signature_help()<CR>",
 		{ noremap = true, silent = true }
 	)
@@ -22,29 +22,29 @@ return function(client)
 		{ noremap = true, silent = true }
 	)
 	vim.api.nvim_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
-	vim.api.nvim_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { noremap = true, silent = true })
-	vim.api.nvim_set_keymap(
-		"n",
-		"<leader>d",
-		"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ show_header = false })<CR>",
-		{ noremap = true, silent = true }
-	)
+	-- vim.api.nvim_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { noremap = true, silent = true })
 	vim.api.nvim_set_keymap(
 		"n",
 		"<leader>dp",
-		"<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>",
+		"<cmd>lua vim.diagnostic.goto_prev()<CR>",
 		{ noremap = true, silent = true }
 	)
 	vim.api.nvim_set_keymap(
 		"n",
 		"<leader>dn",
-		"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+		"<cmd>lua vim.diagnostic.goto_next()<CR>",
 		{ noremap = true, silent = true }
 	)
 	vim.api.nvim_set_keymap(
 		"n",
-		"<leader>q",
-		"<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>",
+		"<leader>l",
+		"<cmd>lua vim.diagnostic.setloclist()<CR>",
+		{ noremap = true, silent = true }
+	)
+	vim.api.nvim_set_keymap(
+		"n",
+		"<leader>ql",
+		"<cmd>lua vim.diagnostic.setqflist()<CR>",
 		{ noremap = true, silent = true }
 	)
 	vim.api.nvim_set_keymap(
@@ -59,7 +59,7 @@ return function(client)
 	if client.resolved_capabilities.document_formatting then
 		vim.cmd("augroup Format")
 		vim.cmd("autocmd! * <buffer>")
-		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)")
+		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)")
 		vim.cmd("augroup END")
 	end
 end

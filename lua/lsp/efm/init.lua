@@ -3,9 +3,9 @@ local on_attach = require("lsp.on_attach")
 local eslint = require("lsp.efm.eslint")
 local prettier = require("lsp.efm.prettier")
 
-local efm_config = "/home/andreas/.config/nvim/lua/lsp/efm/config.yaml"
+local efm_config = "/home/toux/.config/nvim/lua/lsp/efm/config.yaml"
 local efm_log_dir = "/tmp/"
-local efm_root_markers = { "package.json", ".git/", ".zshrc" }
+local efm_root_markers = { "package.json", ".git/" }
 local efm_languages = {
 	yaml = { prettier },
 	json = { prettier },

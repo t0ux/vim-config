@@ -1,5 +1,5 @@
 vim.cmd("syntax on")
-vim.cmd([[ colorscheme horizon ]])
+vim.cmd([[ colorscheme gruvbox ]])
 vim.cmd("set termguicolors")
 
 vim.cmd("hi Normal guibg=none ctermbg=none")

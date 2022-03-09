@@ -44,3 +44,6 @@ set.cursorline = true
 
 -- highlight on yank
 vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })')
+
+--pythonprovider 
+vim.g['python3_host_prog'] = '/usr/bin/python3'
